@@ -17,7 +17,7 @@ class PagesController < ApplicationController
       @restaurant_type = restaurant['categories'].map(&:first).join(', ')
       @restaurant_phone = restaurant['display_phone']
       @restaurant_info = restaurant['url']
-      @restaurant_address = restaurant['location']['display_address']
+      @restaurant_address = [restaurant['location']['display_address'].first, restaurant['location']['display_address'].last]
     end
   end
 
