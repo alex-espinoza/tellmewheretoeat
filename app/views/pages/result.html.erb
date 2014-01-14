@@ -1,11 +1,18 @@
-<h1>YOU SHOULD EAT AT...</h1>
+<section class="results-page">
+  <div class="container">
+    <div class="sixteen columns center">
+      <h1>You should eat at...</h1>
 
-<div>
-  <h1><%= @restaurant_name %></h1>
-  <h3><%= @restaurant_type %></h3>
-  <h3><%= @restaurant_phone %></h3>
-  <h3><%= @restaurant_info %></h3>
-  <% @restaurant_address.each do |l| %>
-    <h3><%= l %></h3>
-  <% end %>
-</div>
+      <div class="results-container">
+        <h1><%= @restaurant_name %></h1>
+        <h3><%= @restaurant_type %></h3>
+        <div class="address-container">
+          <h3><%= @restaurant_address[0] %></h3>
+          <h3><%= @restaurant_address[1] %></h3>
+        </div>
+        <h3><%= @restaurant_phone %></h3>
+        <h3><a href="<%= @restaurant_info %>" target="_blank"><%= @restaurant_info %></a></h3>
+      </div>
+    </div>
+  </div>
+</section>

@@ -2,7 +2,7 @@ body {
   background-color: #e8ecff;
 }
 
-.front-page .center {
+.center {
   margin-top: 100px;
   text-align: center;
 }
@@ -27,10 +27,29 @@ button:hover {
   background-color: #0378a3;
 }
 
-h1 {
-  font-family: Helvetica, sans-serif;
+.results-page {
+  h1 {
+    font-style: italic;
+  }
 }
 
-h3 {
-  font-family: Helvetica, sans-serif;
+.results-container {
+  h1 {
+    font-style: normal;
+    font-size: 5em;
+    font-family: 'AftaSans', Helvetica, sans-serif;
+    margin-top: 60px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
 }
+
+.address-container {
+    margin-top: 30px;
+
+    h3 {
+      margin-top: 0px;
+    }
+  }
