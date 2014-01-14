@@ -1,10 +1,10 @@
 Tellmewheretoeat::Application.routes.draw do
 
-  get 'pages/home' => 'pages#home', :as => 'home', :format => false
-  post 'pages/post_random' => 'pages#post_random', :as => 'post_random'
-  get 'pages/get_random' => 'pages#get_random', :as => 'get_random'
+  get 'home' => 'pages#home', :as => 'home', :format => false
+  post 'location' => 'pages#location', :as => 'post_location'
+  get 'result' => 'pages#result', :as => 'get_result'
 
-  root :to => 'pages#home', :id => 'home'
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

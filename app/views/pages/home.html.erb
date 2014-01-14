@@ -1,7 +1,11 @@
 <h1>TELL ME WHERE TO EAT</h1>
 
-<h2 class="latitude">Your Latitude is: </h2>
+<button id="js-get-location">Get Location</button>
 
-<h2 class="longitude">Your Longitude is: </h2>
-
-<%= link_to 'Get Location', '#', :onclick => 'getGeoLocation()' %>
+<script type="text/javascript">
+  $(function() {
+    $('#js-get-location').click(function() {
+      getGeoLocation();
+    });
+  })
+</script>

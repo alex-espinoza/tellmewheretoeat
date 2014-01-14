@@ -1,0 +1,11 @@
+<h1>YOU SHOULD EAT AT...</h1>
+
+<div>
+  <h1><%= @restaurant_name %></h1>
+  <h3><%= @restaurant_type %></h3>
+  <h3><%= @restaurant_phone %></h3>
+  <h3><%= @restaurant_info %></h3>
+  <% @restaurant_address.each do |l| %>
+    <h3><%= l %></h3>
+  <% end %>
+</div>
