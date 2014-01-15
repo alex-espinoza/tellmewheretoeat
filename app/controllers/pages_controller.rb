@@ -18,6 +18,7 @@ class PagesController < ApplicationController
       @restaurant_phone = restaurant['display_phone']
       @restaurant_info = restaurant['url']
       @restaurant_address = [restaurant['location']['display_address'].first, restaurant['location']['display_address'].last]
+      @restaurant_url_escaped_address = CGI::escape(@restaurant_address.join(','))
     end
   end
 
@@ -144,7 +145,7 @@ class PagesController < ApplicationController
                 :term => '',
                 :category_filter => categories,
                 :limit => 20,
-                :radius_filter => 8047,
+                :radius_filter => 1609, # in meters = 1 mile
                 :latitude => session[:latitude],
                 :longitude => session[:longitude])
     return client.search(request)

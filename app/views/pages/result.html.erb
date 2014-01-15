@@ -6,9 +6,9 @@
       <div class="results-container">
         <h1><%= @restaurant_name %></h1>
         <h3><%= @restaurant_type %></h3>
-        <div style='width: 800px;'>
-          <div id="map-container" style='width: 800px; height: 400px;'></div>
-        </div>
+
+        <%=image_tag "http://maps.googleapis.com/maps/api/staticmap?zoom=15&size=700x400&markers=color:red%7Clabel:A%7C#{session[:latitude]}%2C#{session[:longitude]}&markers=color:green%7Clabel:B%7C#{@restaurant_url_escaped_address}&sensor=true" %>
+
         <div class="address-container">
           <h3><%= @restaurant_address[0] %></h3>
           <h3><%= @restaurant_address[1] %></h3>
