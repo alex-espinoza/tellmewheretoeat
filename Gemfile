@@ -18,5 +18,3 @@ group :development, :test do
 end
 
 gem 'yelpster'
-gem 'gmaps4rails'
-gem 'underscore-rails'
