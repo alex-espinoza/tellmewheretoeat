@@ -15,7 +15,19 @@
         </div>
         <h3><%= @restaurant_phone %></h3>
         <h3><a href="<%= @restaurant_info %>" target="_blank"><%= @restaurant_info %></a></h3>
+
+        <button id="js-get-location">Nah, find something else</button>
       </div>
     </div>
   </div>
 </section>
+
+<script type="text/javascript">
+  $(function() {
+    $('#js-get-location').click(function() {
+      $(this).prop('disabled', true);
+      $('#js-get-location').text('Finding restaurant...');
+      getGeoLocation();
+    });
+  })
+</script>
