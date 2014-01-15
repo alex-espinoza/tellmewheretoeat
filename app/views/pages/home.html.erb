@@ -1,6 +1,8 @@
 <section class="front-page">
   <div class="container">
     <div class="sixteen columns center">
+      <h1>Find a new place to eat, randomly chosen for you!</h1>
+      <h3>Locates restaurants within a one mile radius of your current location. Created to be used in populous, metropolitan areas.</h3>
       <button id="js-get-location">Tell me where to eat</button>
     </div>
   </div>
@@ -9,6 +11,8 @@
 <script type="text/javascript">
   $(function() {
     $('#js-get-location').click(function() {
+      $(this).prop('disabled', true);
+      $('#js-get-location').text('Finding restaurant...');
       getGeoLocation();
     });
   })
