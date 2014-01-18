@@ -1,9 +1,17 @@
 <section class="front-page">
   <div class="container">
+    <div class="sixteen columns clearfix center">
+      <div class="eight columns alpha">
+        <h1>Find a new place to eat, randomly chosen for you.</h1>
+      </div>
+      <div class="eight columns omega">
+        <h3>Locates restaurants within a one mile radius of your current location. Best used in populous, metropolitan areas.</h3>
+        <button id="js-get-location">Tell me where to eat</button>
+        <h4>Your browser will ask you for permission to use your current location to be able to use this website.</h3>
+      </div>
+    </div>
     <div class="sixteen columns center">
-      <h1>Find a new place to eat, randomly chosen for you!</h1>
-      <h3>Locates restaurants within a one mile radius of your current location. Created to be used in populous, metropolitan areas.</h3>
-      <button id="js-get-location">Tell me where to eat</button>
+      <p>created by <a href="http://alex.aspria.net/">alex</a></p>
     </div>
   </div>
 </section>
@@ -12,7 +20,7 @@
   $(function() {
     $('#js-get-location').click(function() {
       $(this).prop('disabled', true);
-      $('#js-get-location').text('Finding restaurant...');
+      $(this).text(randomLoadingText());
       getGeoLocation();
     });
   })

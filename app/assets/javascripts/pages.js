@@ -13,3 +13,10 @@ function getGeoLocation() {
     });
   });
 }
+
+function randomLoadingText() {
+  var text = ['Hold up...', 'Sit tight...', 'One sec...', 'Looking around...', 'Searching...', 'Finding restaurant...',
+               'Hmm...', "Let's see...", 'How about...', 'Hold on...', "I'll find you something nice...", 'I got this...'];
+  var randomText = text[Math.floor(Math.random() * text.length)];
+  return randomText;
+}
